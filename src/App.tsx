@@ -1,8 +1,15 @@
+import { QueryClient, QueryClientProvider } from 'react-query'
+import styles from './app.module.scss'
+import InputBox from './components/InputBox'
+
 const App = () => {
+  const queryClient = new QueryClient()
   return (
-    <main>
-      <h1>Hello</h1>
-    </main>
+    <QueryClientProvider client={queryClient}>
+      <div className={styles.container}>
+        <InputBox />
+      </div>
+    </QueryClientProvider>
   )
 }
 
