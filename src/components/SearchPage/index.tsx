@@ -1,10 +1,11 @@
+import SearchedList from '../SearchedList'
 import SearchInput from '../SearchInput'
 
 const SearchPage = () => {
   return (
     <div>
       <SearchInput />
-      SearchPage
+      <SearchedList />
     </div>
   )
 }

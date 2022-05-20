@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from 'react'
 import { useQuery } from 'react-query'
 import { getDisease } from '../../service/getDisease'
+import styles from './searchInput.module.scss'
 
 const SearchInput = () => {
   const [searchValue, setSearchValue] = useState('')
@@ -32,10 +33,12 @@ const SearchInput = () => {
   // const onSubmit = (e: any) => {}
 
   return (
-    <div className='{styles.searchedList}'>
-      <h1>searchData</h1>
+    <div className={styles.searchedList}>
       <form>
-        <input type='text' placeholder='s' onChange={onChangeHandler} />
+        <input className={styles.input} type='text' placeholder='질환을 입력해 주세요.' onChange={onChangeHandler} />
+        <button className={styles.submitBtn} type='submit'>
+          검색
+        </button>
       </form>
     </div>
   )
